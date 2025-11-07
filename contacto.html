@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Runa Producciones</title>
+  <link rel="stylesheet" href="asset/style-base.css">
+  <link rel="stylesheet" href="asset/style-contacto.css">
+</head>
+
+<body>
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+  ⚠️ Esta página web es solo de prueba y aprendizaje ⚠️
+</marquee>
+
+  <header id="arriba">
+    <h1><a href="index.html">Runa Producciones</a></h1>
+
+    <nav class="contenedor">
+      <ul>
+        <li>
+          <a href="#">Servicios</a>
+          <ul>
+            <li><a href="servicios/retrato.html">Retrato</a></li>
+            <li><a href="servicios/artistas.html">Artistas</a></li>
+            <li><a href="servicios/eventos.html">Eventos</a></li>
+          </ul>
+        </li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contacto</h2>
+    <form id="formularioContacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="tema">Tema:</label>
+      <select id="tema" name="tema">
+        <option value="opinion">Opinión</option>
+        <option value="sugerencia">Sugerencia</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <p>¿Eres una tía chula?</p>
+      <label><input type="radio" name="gusto" value="si" required> Sí</label>
+      <label><input type="radio" name="gusto" value="siempre"> Siempre</label>
+
+      <label><input type="checkbox" name="suscribir"> Quiero que me stalkees ✨</label>
+
+      <label for="comentarios">Cuéntame cosas:</label>
+      <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="mensaje" class="mensaje"></div>
+
+    <a href="#arriba"><img src="imagenes/abejorro.png" alt="Subir al inicio"></a>
+  </main>
+
+  <footer>
+    <p>&copy;2025 Escrita y dirigida por Runa</p>
+  </footer>
+</body>
+</html>

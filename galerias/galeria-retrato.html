@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Retrato | Runa Producciones</title>
+  <link rel="stylesheet" href="../asset/style-base.css">
+  <style>
+    body {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .deck {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      position: absolute;
+      width: 300px;
+      height: 400px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      transition: all 0.4s ease;
+      opacity: 0.6;
+      transform: scale(0.8);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card.active {
+      transform: scale(1);
+      opacity: 1;
+      z-index: 10;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    }
+
+    .flechas {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      gap: 40px;
+    }
+
+    button {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid white;
+      color: white;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+   <marquee behavior="scroll" direction="left" scrollamount="5">
+  ⚠️ Esta página web es solo de prueba y aprendizaje ⚠️
+</marquee>
+
+  <header id="arriba">
+    <h1><a href="index.html">Runa Producciones</a></h1>
+
+    <nav class="contenedor">
+      <ul>
+        <li>
+          <a href="#">Servicios</a>
+          <ul>
+            <li><a href="servicios/retrato.html">Retrato</a></li>
+            <li><a href="servicios/artistas.html">Artistas</a></li>
+            <li><a href="servicios/eventos.html">Eventos</a></li>
+          </ul>
+        </li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <h2>Galería Retrato</h2>
+  
+  <div class="deck">
+    <div class="card active"><img src="../imagenes/retrato1.jpg" alt=""></div>
+    <div class="card"><img src="../imagenes/retrato2.jpg" alt=""></div>
+    <div class="card"><img src="../imagenes/retrato3.jpg" alt=""></div>
+    <div class="card"><img src="../imagenes/retrato4.jpg" alt=""></div>
+  </div>
+
+  <div class="flechas">
+    <button id="prev">⬅️</button>
+    <button id="next">➡️</button>
+  </div>
+</main>
+  <script>
+    const cards = document.querySelectorAll('.card');
+    let current = 0;
+
+    function updateCards() {
+      cards.forEach((card, index) => {
+        card.classList.remove('active');
+        card.style.transform = `translateX(${(index - current) * 60}px) scale(${index === current ? 1 : 0.8})`;
+        card.style.opacity = index === current ? 1 : 0.6;
+        if (index === current) card.classList.add('active');
+      });
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
+      current = (current + 1) % cards.length;
+      updateCards();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      current = (current - 1 + cards.length) % cards.length;
+      updateCards();
+    });
+
+    updateCards();
+  </script>
+</body>
+</html>

@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Runa Producciones</title>
+  <title>Galería | Runa Producciones</title>
   <link rel="stylesheet" href="asset/style-base.css">
+  <script src="script.js"></script>
     <link rel="canonical">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MELL2WWHZK"></script>
@@ -22,24 +23,18 @@
   ⚠️ Esta página web es solo de prueba y aprendizaje ⚠️
 </marquee>
 
-  <header id="arriba">
-    <h1><a href="index.html">Runa Producciones</a></h1>
+<header id="arriba">
+  <h1><a href="index.html">Runa Producciones</a></h1>
 
-    <nav class="contenedor">
-      <ul>
-        <li>
-          <a href="#">Servicios</a>
-          <ul>
-            <li><a href="servicios/retrato.html">Retrato</a></li>
-            <li><a href="servicios/eventos.html">Eventos</a></li>
-          </ul>
-        </li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="contenedor" id="nav">
+    <ul>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main>
     <h2>Contacto</h2>
@@ -74,8 +69,27 @@
     <a href="#arriba"><img src="imagenes/abejorro.png" alt="Subir al inicio"></a>
   </main>
 
-  <footer>
-    <p>&copy;2025 Escrita y dirigida por Runa</p>
-  </footer>
+<footer>
+  <div>
+      <ul>
+        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+      </ul>
+
+    <div">
+      <h4>Contacto</h4>
+      <p class="small">soporte@runa-producciones.com</p>
+      <p class="small">Tel. +34 600 000 000</p>
+    </div>
+  </div>
+
+  <div>
+    <p class="small">© <span id="anio"></span> Runa Producciones — Todos los derechos reservados.</p>
+  </div>
+</footer>
+  <script>
+  // Poner año actual en el footer
+  document.getElementById('anio').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

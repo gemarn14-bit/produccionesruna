@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
-  <meta name="description" content="Contacta con Runa Producciones para consultas, presupuestos o sugerencias. Completa nuestro formulario y recibe respuesta rápida.">
+  <title>Blog audiovisual</title>
+  <meta name="description" content="Mantente al día con las novedades de Runa Producciones: proyectos, colaboraciones y exposiciones fotográficas.">
   <link rel="stylesheet" href="asset/style-base.css">
   <script src="script.js"></script>
 
-  <!-- Canonical corregido -->
-  <link rel="canonical" href="https://www.runa-producciones.com/contacto.html">
+  <!-- Canonical correctamente declarado -->
+  <link rel="canonical" href="https://www.runa-producciones.com/blog.html">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MELL2WWHZK"></script>
@@ -41,42 +41,43 @@
 </header>
 
 <main>
-  <h2>Contacto</h2>
+  <h1>Noticias</h1>
 
-  <form id="formularioContacto">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
+  <p class="intro">
+    Mantente al día con las últimas novedades de <strong>Runa Producciones</strong>.  
+    Aquí compartimos nuestros proyectos, colaboraciones, lanzamientos y todo lo que ocurre detrás de cámaras.
+  </p>
 
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required>
+  <section class="noticias">
 
-    <label for="tema">Tema:</label>
-    <select id="tema" name="tema">
-      <option value="opinion">Opinión</option>
-      <option value="sugerencia">Sugerencia</option>
-      <option value="otro">Otro</option>
-    </select>
+    <article class="noticia">
+      <img src="imagenes/noticia1.webp" alt="Rodaje de cortometraje">
+      <h2>Nuevo cortometraje en producción</h2>
+      <p>Comenzamos el rodaje de nuestra nueva historia visual, donde exploramos la conexión entre el arte y la identidad.</p>
+      <p class="fecha">Publicado el 10 de octubre de 2025</p>
+    </article>
 
-    <fieldset>
-      <legend>¿Eres una tía chula?</legend>
-      <label><input type="radio" name="gusto" value="si" required> Sí</label>
-      <label><input type="radio" name="gusto" value="siempre"> Siempre</label>
-    </fieldset>
+    <article class="noticia">
+      <img src="imagenes/noticia2.webp" alt="Equipo de rodaje">
+      <h2>Colaboración con artistas locales</h2>
+      <p>Runa Producciones colabora con músicos y pintores de la ciudad en un proyecto audiovisual lleno de color y emociones.</p>
+      <p class="fecha">Publicado el 2 de octubre de 2025</p>
+    </article>
 
-    <label><input type="checkbox" name="suscribir"> Quiero que me stalkees ✨</label>
+    <article class="noticia">
+      <img src="imagenes/noticia3.webp" alt="Exposición de fotografías">
+      <h2>Exposición fotográfica “Luz y Mirada”</h2>
+      <p>Una selección de nuestros mejores retratos llega a la galería central en una muestra abierta al público.</p>
+      <p class="fecha">Publicado el 25 de septiembre de 2025</p>
+    </article>
 
-    <label for="comentarios">Cuéntame cosas:</label>
-    <textarea id="comentarios" name="comentarios" rows="5"></textarea>
-
-    <button type="submit">Enviar</button>
-  </form>
-
-  <div id="mensaje" class="mensaje"></div>
+  </section>
 
   <a href="#arriba"><img src="imagenes/abejorro.webp" alt="Subir al inicio"></a>
 </main>
 
 <footer>
+
   <div>
     <ul>
       <li><a href="aviso-legal.html">Aviso Legal</a></li>
@@ -93,6 +94,7 @@
   <div>
     <p class="small">© <span id="anio"></span> Runa Producciones — Todos los derechos reservados.</p>
   </div>
+
 </footer>
 
 <script>

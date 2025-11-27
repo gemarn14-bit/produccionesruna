@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería | Runa Producciones</title>
+  <title>Runa Producciones</title>
+  <meta name="description" content="Runa Producciones: servicios de video, fotografía y cobertura de eventos con estilo profesional. Descubre nuestros proyectos y contacta hoy">
   <link rel="stylesheet" href="asset/style-base.css">
-  <script src="script.js"></script>
-    <link rel="canonical">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MELL2WWHZK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-MELL2WWHZK');
-</script>
+  <!-- script principal con defer -->
+  <script src="script.js" defer></script>
+
+  <!-- Canonical corregido (puedes poner tu dominio real) -->
+  <link rel="canonical" href="https://runa-producciones.com/">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MELL2WWHZK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MELL2WWHZK');
+  </script>
 </head>
 
 <body>
+
+  <!-- NO tocado (marquesina intacta) -->
   <marquee behavior="scroll" direction="left" scrollamount="5">
-  ⚠️ Esta página web es solo de prueba y aprendizaje ⚠️
-</marquee>
+    ⚠️ Esta página web es solo de prueba y aprendizaje ⚠️
+  </marquee>
 
 <header id="arriba">
   <h1><a href="index.html">Runa Producciones</a></h1>
@@ -36,54 +43,55 @@
   </nav>
 </header>
 
-  <main>
-    <section class="module parallax parallax-1">
-      <div class="container">
-        <h1>Videos</h1>
-      </div>
-    </section>
+<main>
+  <section class="module parallax parallax-1">
+    <div class="container">
+      <h1>Videos</h1>
+    </div>
+  </section>
 
-    <section class="module content">
-      <div class="container">
-        <p>Producción audiovisual profesional adaptada a tus necesidades. Desde videoclips y cortometrajes hasta campañas promocionales.</p>
-      </div>
-    </section>
+  <section class="module content">
+    <div class="container">
+      <p>Producción audiovisual profesional adaptada a tus necesidades. Desde videoclips y cortometrajes hasta campañas promocionales.</p>
+    </div>
+  </section>
 
-    <section class="module parallax parallax-2">
-      <div class="container">
-        <h1>Fotografía</h1>
-      </div>
-    </section>
+  <section class="module parallax parallax-2">
+    <div class="container">
+      <h1>Fotografía</h1>
+    </div>
+  </section>
 
-    <section class="module content">
-      <div class="container">
-        <p>Retratos, eventos y sesiones creativas con estilo propio. Capturamos la esencia de cada momento con luz y emoción.</p>
-      </div>
-    </section>
+  <section class="module content">
+    <div class="container">
+      <p>Retratos, eventos y sesiones creativas con estilo propio. Capturamos la esencia de cada momento con luz y emoción.</p>
+    </div>
+  </section>
 
-    <section class="module parallax parallax-3">
-      <div class="container">
-        <h1>Eventos</h1>
-      </div>
-    </section>
+  <section class="module parallax parallax-3">
+    <div class="container">
+      <h1>Eventos</h1>
+    </div>
+  </section>
 
-    <section class="module content">
-      <div class="container">
-        <p>Cubrimos tus momentos más especiales con calidad cinematográfica y sensibilidad artística.</p>
-      </div>
-    </section>
+  <section class="module content">
+    <div class="container">
+      <p>Cubrimos tus momentos más especiales con calidad cinematográfica y sensibilidad artística.</p>
+    </div>
+  </section>
 
-    <a href="#arriba"><img src="imagenes/abejorro.png" alt="Subir"></a>
-  </main>
+  <a href="#arriba"><img src="imagenes/abejorro.webp" alt="Subir"></a>
+</main>
 
 <footer>
   <div>
-      <ul>
-        <a href="aviso-legal.html">Aviso Legal</a>
-        <a href="politica-privacidad.html">Política de Privacidad</a>
-      </ul>
+    <ul>
+      <li><a href="aviso-legal.html">Aviso Legal</a></li>
+      <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+    </ul>
 
-    <div">
+    <!-- DIV corregido -->
+    <div>
       <h4>Contacto</h4>
       <p class="small">soporte@runa-producciones.com</p>
       <p class="small">Tel. +34 600 000 000</p>
@@ -94,9 +102,11 @@
     <p class="small">© <span id="anio"></span> Runa Producciones — Todos los derechos reservados.</p>
   </div>
 </footer>
-  <script>
-  // Poner año actual en el footer
+
+<script>
+  // Año actual
   document.getElementById('anio').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
